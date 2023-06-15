@@ -38,7 +38,7 @@ function UserEditForm({id}) {
   const validate=(x)=>{
     console.log(x)
     const isuserPresent = userlist.filter((user)=>user.email===x.email)
-    if(x.username===''||x.email===''||x.phoneNo===''||x.phoneNo.length!==10||isuserPresent.length!==0){
+    if(x.username===''||x.email===''||x.phoneNo===''||x.phoneNo.length!==10||isuserPresent.length>1){
       return false;
     }
     else{
